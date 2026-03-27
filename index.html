@@ -6,8 +6,19 @@
   <title>Page Craft Studio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+<a href="#" class="scroll-top" id="scrollTopBtn" aria-label="Back to top">↑</a>
 <body>
+<script>
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
 
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      scrollTopBtn.classList.add('show');
+    } else {
+      scrollTopBtn.classList.remove('show');
+    }
+  });
+</script>
   <header class="header">
     <div class="container header-inner">
       <div class="logo">©PAGE CRAFT<br>STUDIO</div>
