@@ -5,6 +5,75 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Page Craft Studio</title>
   <link rel="stylesheet" href="style.css" />
+
+  <style>
+    @media (max-width: 900px) {
+      .hero-circles,
+      .hero-circles *,
+      .hero .hero-circles,
+      .hero .circle,
+      .circle.blue,
+      .circle.black,
+      .circle.yellow,
+      .circle.red {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        animation: none !important;
+        transform: none !important;
+      }
+
+      .nav,
+      .nav-groups,
+      .nav-dropdown {
+        position: relative !important;
+        z-index: 1000 !important;
+      }
+
+      .nav-dropbtn {
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .nav-dropdown-content {
+        display: none !important;
+        position: static !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: none !important;
+        max-height: 0 !important;
+        overflow: hidden !important;
+      }
+
+      .nav-dropdown.open .nav-dropdown-content {
+        display: block !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        max-height: 500px !important;
+        overflow: visible !important;
+      }
+
+      .nav-dropdown-content a {
+        display: block !important;
+        pointer-events: auto !important;
+        position: relative;
+        z-index: 1001;
+      }
+    }
+
+    .logo {
+      text-decoration: none !important;
+      color: inherit !important;
+    }
+
+    .logo:visited,
+    .logo:active,
+    .logo:hover {
+      text-decoration: none !important;
+      color: inherit !important;
+    }
+</style>
 </head>
 <a href="#" class="scroll-top" id="scrollTopBtn" aria-label="Back to top">↑</a>
 <body>
@@ -21,7 +90,7 @@
 </script>
   <header class="header">
     <div class="container header-inner">
-      <div class="logo">©PAGE CRAFT<br>STUDIO</div>
+      <a href="#" class="logo" id="homeLogo" aria-label="Page Craft Studio home">©PAGE CRAFT<br>STUDIO</a>
 
       <nav class="nav">
         <div class="nav-groups">
@@ -467,6 +536,119 @@
   </div>
   <p class="follow-text">Follow us @pagecraft.studio</p>
 </footer>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const homeLogo = document.getElementById('homeLogo');
+    const mobileQuery = window.matchMedia('(max-width: 900px)');
+    const dropdowns = Array.from(document.querySelectorAll('.nav-dropdown'));
+
+    if (homeLogo) {
+      homeLogo.addEventListener('click', (event) => {
+        event.preventDefault();
+        window.location.hash = '';
+        window.scrollTo({ top: 0, behavior: 'auto' });
+        window.location.reload();
+      });
+    }
+
+    dropdowns.forEach((dropdown) => {
+      const button = dropdown.querySelector('.nav-dropbtn');
+      if (button) {
+        button.setAttribute('type', 'button');
+        button.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    const closeAllDropdowns = (exceptDropdown = null) => {
+      dropdowns.forEach((dropdown) => {
+        if (dropdown !== exceptDropdown) {
+          dropdown.classList.remove('open');
+          const button = dropdown.querySelector('.nav-dropbtn');
+          if (button) button.setAttribute('aria-expanded', 'false');
+        }
+      });
+    };
+
+    const toggleDropdown = (dropdown) => {
+      const button = dropdown.querySelector('.nav-dropbtn');
+      const willOpen = !dropdown.classList.contains('open');
+      closeAllDropdowns(willOpen ? dropdown : null);
+      dropdown.classList.toggle('open', willOpen);
+      if (button) button.setAttribute('aria-expanded', String(willOpen));
+    };
+
+    dropdowns.forEach((dropdown) => {
+      const button = dropdown.querySelector('.nav-dropbtn');
+      const links = dropdown.querySelectorAll('.nav-dropdown-content a');
+
+      if (!button) return;
+
+      button.addEventListener('click', (event) => {
+        if (!mobileQuery.matches) return;
+        event.preventDefault();
+        event.stopPropagation();
+        toggleDropdown(dropdown);
+      });
+
+      button.addEventListener('touchstart', (event) => {
+        if (!mobileQuery.matches) return;
+        event.preventDefault();
+        event.stopPropagation();
+        toggleDropdown(dropdown);
+      }, { passive: false });
+
+      links.forEach((link) => {
+        link.addEventListener('click', (event) => {
+          event.stopPropagation();
+          setTimeout(() => closeAllDropdowns(), 50);
+        });
+
+        link.addEventListener('touchstart', (event) => {
+          event.stopPropagation();
+        }, { passive: true });
+      });
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!mobileQuery.matches) return;
+      if (!event.target.closest('.nav-dropdown')) {
+        closeAllDropdowns();
+      }
+    });
+
+    document.addEventListener('touchstart', (event) => {
+      if (!mobileQuery.matches) return;
+      if (!event.target.closest('.nav-dropdown')) {
+        closeAllDropdowns();
+      }
+    }, { passive: true });
+
+    window.addEventListener('resize', () => {
+      if (!mobileQuery.matches) {
+        closeAllDropdowns();
+      }
+    });
+  });
+</script>
+
+
+  <script>
+    (function () {
+      if (window.matchMedia('(max-width: 900px)').matches) {
+        document.addEventListener('DOMContentLoaded', function () {
+          document.querySelectorAll('.hero-circles, .hero-circles .circle, .hero .circle').forEach(function (el) {
+            el.style.display = 'none';
+            el.style.visibility = 'hidden';
+            el.style.opacity = '0';
+            el.style.animation = 'none';
+            el.style.transform = 'none';
+          });
+        });
+      }
+    })();
+  </script>
 
 </body>
 </html>
