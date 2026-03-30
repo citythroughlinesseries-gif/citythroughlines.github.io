@@ -5,75 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Page Craft Studio</title>
   <link rel="stylesheet" href="style.css" />
-
-  <style>
-    @media (max-width: 900px) {
-      .hero-circles,
-      .hero-circles *,
-      .hero .hero-circles,
-      .hero .circle,
-      .circle.blue,
-      .circle.black,
-      .circle.yellow,
-      .circle.red {
-        display: none !important;
-        visibility: hidden !important;
-        opacity: 0 !important;
-        animation: none !important;
-        transform: none !important;
-      }
-
-      .nav,
-      .nav-groups,
-      .nav-dropdown {
-        position: relative !important;
-        z-index: 1000 !important;
-      }
-
-      .nav-dropbtn {
-        touch-action: manipulation;
-        -webkit-tap-highlight-color: transparent;
-      }
-
-      .nav-dropdown-content {
-        display: none !important;
-        position: static !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-        pointer-events: none !important;
-        max-height: 0 !important;
-        overflow: hidden !important;
-      }
-
-      .nav-dropdown.open .nav-dropdown-content {
-        display: block !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-        pointer-events: auto !important;
-        max-height: 500px !important;
-        overflow: visible !important;
-      }
-
-      .nav-dropdown-content a {
-        display: block !important;
-        pointer-events: auto !important;
-        position: relative;
-        z-index: 1001;
-      }
-    }
-
-    .logo {
-      text-decoration: none !important;
-      color: inherit !important;
-    }
-
-    .logo:visited,
-    .logo:active,
-    .logo:hover {
-      text-decoration: none !important;
-      color: inherit !important;
-    }
-</style>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WZ3XR4J0G0"></script>
@@ -86,26 +17,22 @@
 </script>
 <a href="#" class="scroll-top" id="scrollTopBtn" aria-label="Back to top">↑</a>
   <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/8036ab26201f92728851056b3/d5f7a31043c1b77db09bad115.js");</script>
-<body>
-<script>
-  const scrollTopBtn = document.getElementById('scrollTopBtn');
+<body id="top">
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 400) {
-      scrollTopBtn.classList.add('show');
-    } else {
-      scrollTopBtn.classList.remove('show');
-    }
-  });
-</script>
   <header class="header">
     <div class="container header-inner">
-      <a href="#" class="logo" id="homeLogo" aria-label="Page Craft Studio home">©PAGE CRAFT<br>STUDIO</a>
+      <div class="logo">©PAGE CRAFT<br>STUDIO</div>
 
-      <nav class="nav">
+      <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav" id="mobileNav">
         <div class="nav-groups">
-          <div class="nav-dropdown">
-            <button class="nav-dropbtn">EUROPE</button>
+          <details class="nav-dropdown">
+            <summary class="nav-dropbtn">EUROPE</summary>
             <div class="nav-dropdown-content">
               <a href="#london">London</a>
               <a href="#stockholm">Stockholm</a>
@@ -115,28 +42,28 @@
               <a href="#amsterdam">Amsterdam</a>
               <a href="#kortrijk">Kortrijk</a>
             </div>
-          </div>
+          </details>
 
-          <div class="nav-dropdown">
-            <button class="nav-dropbtn">AMERICAS</button>
+          <details class="nav-dropdown">
+            <summary class="nav-dropbtn">AMERICAS</summary>
             <div class="nav-dropdown-content">
               <a href="#newyork">New York</a>
             </div>
-          </div>
+          </details>
 
-          <div class="nav-dropdown">
-            <button class="nav-dropbtn">ASIA</button>
+          <details class="nav-dropdown">
+            <summary class="nav-dropbtn">ASIA</summary>
             <div class="nav-dropdown-content">
               <a href="#tokyo">Tokyo</a>
             </div>
-          </div>
+          </details>
 
-          <div class="nav-dropdown">
-            <button class="nav-dropbtn">AFRICA</button>
+          <details class="nav-dropdown">
+            <summary class="nav-dropbtn">AFRICA</summary>
             <div class="nav-dropdown-content">
               <a href="#capetown">Cape Town</a>
             </div>
-          </div>
+          </details>
         </div>
 
         <div class="nav-actions">
@@ -166,7 +93,7 @@
           YOU NEEDED.
         </h1>
       </div>
-      <div class="hero-circles">
+      <div class="hero-circles" aria-hidden="true">
         <div class="circle blue"></div>
         <div class="circle black"></div>
         <div class="circle yellow"></div>
@@ -175,21 +102,18 @@
     </div>
   </section>
 
-  <!-- LONDON -->
   <section class="section white" id="london">
     <div class="container row">
       <div class="text">
         <div class="label blue">LONDON</div>
-        <p><strong>A GALLERY OF LINES, READY FOR COLOUR:</strong> Big Ben. The Gherkin. Tower Bridge. Double-Decker Bus. Barbican Centre. Old Spitalfields Market. London Eye. Red Telephone Box. Hyde Park. Kew Gardens. Tate Modern. Borough Market. Soho. Shoreditch. The Shard.</p>
-        <a href="https://www.amazon.com/dp/B0F4WYR1YX" 
-   class="city-cta" 
-   target="_blank" 
-   rel="noopener noreferrer">
-   CHECK IT OUT
-</a>
+         <p><strong>A GALLERY OF LINES, READY FOR COLOUR:</strong> Big Ben. The Gherkin. Tower Bridge. Double-Decker Bus. Barbican Centre. Old Spitalfields Market. London Eye. Red Telephone Box. Hyde Park. Kew Gardens. Tate Modern. Borough Market. Soho. Shoreditch. The Shard.</p>
+        <a href="https://www.amazon.com/dp/B0F4WYR1YX" class="city-cta" target="_blank" rel="noopener noreferrer">CHECK IT OUT</a>
       </div>
-      <div class="featured-image">
-        <img src="images/london/londoneye.png" alt="London featured illustration">
+      <div class="featured-carousel" data-slides="2">
+        <div class="featured-track">
+          <img src="images/london/Kewgarden.jpeg" alt="London featured illustration 1">
+          <img src="images/london/Kewgarden2.jpg" alt="London featured illustration 2">
+        </div>
       </div>
     </div>
     <div class="color-dots bottom">
@@ -199,22 +123,18 @@
     </div>
   </section>
 
-  <!-- TOKYO -->
   <section class="section red" id="tokyo">
     <div class="container row reverse">
       <div class="text">
         <div class="label black">TOKYO</div>
         <p><strong>A GALLERY OF LINES, READY FOR COLOUR:</strong> Mount Fuji. Meiji Shrine Torii Gate. Imperial Palace Gate and Nijubashi Bridge. Akihabara Electric Town. Sensō-ji Temple. Sakura Blossoms Over the River. Shibuya Crossing. Tsukiji Fish Market. Daruma Doll. Shinkansen. Ghibli Museum. Sushi. Omoide Yokocho. Odaiba Gundam Statue.</p>
-
-<a href="https://www.amazon.com/dp/B0FV8GG3RG" 
-   class="city-cta" 
-   target="_blank" 
-   rel="noopener noreferrer">
-   CHECK IT OUT
-</a>
+        <a href="https://www.amazon.com/dp/B0FV8GG3RG" class="city-cta" target="_blank" rel="noopener noreferrer">CHECK IT OUT</a>
       </div>
-      <div class="featured-image">
-        <img src="images/tokyo/daruma.jpg" alt="Tokyo featured illustration">
+      <div class="featured-carousel" data-slides="2">
+        <div class="featured-track">
+          <img src="images/tokyo/daruma.jpg" alt="Tokyo featured illustration 1">
+          <img src="images/tokyo/daruma2.jpeg" alt="Tokyo featured illustration 2">
+        </div>
       </div>
     </div>
     <div class="color-dots bottom">
@@ -224,21 +144,18 @@
     </div>
   </section>
 
-  <!-- NEW YORK -->
   <section class="section white" id="newyork">
     <div class="container row">
       <div class="text">
         <div class="label red">NEW YORK</div>
         <p><strong>A GALLERY OF LINES, READY FOR COLOUR:</strong> Statue of Liberty. Brooklyn Bridge. Central Park. Times Square. New York Public Library. Empire State Building. Yankee Stadium. Guggenheim Museum. Chrysler Building. Grand Central Terminal. Fifth Avenue. Broadway. H&amp;H Bagels. One World Trade Center.</p>
-<a href="https://www.amazon.com/gp/product/B0FPQNQQKS?ref_=dbs_m_mng_rwt_calw_tpbk_4&storeType=ebooks" 
-   class="city-cta" 
-   target="_blank" 
-   rel="noopener noreferrer">
-   CHECK IT OUT
-</a>
+        <a href="https://www.amazon.com/gp/product/B0FPQNQQKS?ref_=dbs_m_mng_rwt_calw_tpbk_4&storeType=ebooks" class="city-cta" target="_blank" rel="noopener noreferrer">CHECK IT OUT</a>
       </div>
-      <div class="featured-image">
-        <img src="images/newyork/liberty.png" alt="New York featured illustration">
+      <div class="featured-carousel" data-slides="2">
+        <div class="featured-track">
+          <img src="images/newyork/liberty.png" alt="New York featured illustration 1">
+          <img src="images/newyork/liberty2.jpg" alt="New York featured illustration 2">
+        </div>
       </div>
     </div>
     <div class="color-dots bottom">
@@ -248,21 +165,18 @@
     </div>
   </section>
 
-  <!-- STOCKHOLM -->
   <section class="section yellow" id="stockholm">
     <div class="container row reverse">
       <div class="text">
         <div class="label black">STOCKHOLM</div>
         <p><strong>A GALLERY OF LINES, READY FOR COLOUR:</strong> Stockholm City Hall. Vasa Museum. Gamla Stan Rooftops. Stockholm Metro. Fika. Södermalm. Swedish Dala Horses. Stockholm Public Library. Skansen Museum Houses. Scandinavian Furniture. Djurgården Ferris Wheel. Archipelago Boats. Concert Hall. Drottningholm Palace. Strandvägen.</p>
-<a href="https://www.amazon.com/gp/product/B0F9FBL4JF?ref_=dbs_m_mng_rwt_calw_tpbk_1&storeType=ebooks" 
-   class="city-cta" 
-   target="_blank" 
-   rel="noopener noreferrer">
-   CHECK IT OUT
-</a>
+        <a href="https://www.amazon.com/gp/product/B0F9FBL4JF?ref_=dbs_m_mng_rwt_calw_tpbk_1&storeType=ebooks" class="city-cta" target="_blank" rel="noopener noreferrer">CHECK IT OUT</a>
       </div>
-      <div class="featured-image">
-        <img src="images/stockholm/vasaship.jpg" alt="Stockholm featured illustration">
+      <div class="featured-carousel" data-slides="2">
+        <div class="featured-track">
+          <img src="images/stockholm/vasaship.jpg" alt="Stockholm featured illustration 1">
+          <img src="images/stockholm/vasaship2.jpeg" alt="Stockholm featured illustration 2">
+        </div>
       </div>
     </div>
     <div class="color-dots bottom">
@@ -272,22 +186,18 @@
     </div>
   </section>
 
-  <!-- VILNIUS -->
   <section class="section blue" id="vilnius">
     <div class="container row">
       <div class="text">
         <div class="label yellow">VILNIUS</div>
         <p><strong>A GALLERY OF LINES, READY FOR COLOUR:</strong> Gediminas Tower. MO Museum. St. Anne’s Church. Pilies Street. Gates of Dawn. Cathedral Square. TV Tower. Šaltibarščiai. National Gallery of Art. White Bridge. Three Crosses Monument. Užupis. Bernardinai Garden. Hales Market. Trolleybus.</p>
-
-<a href="https://www.amazon.com/gp/product/B0FDFZYXKM?ref_=dbs_m_mng_rwt_calw_tpbk_2&storeType=ebooks" 
-   class="city-cta" 
-   target="_blank" 
-   rel="noopener noreferrer">
-   CHECK IT OUT
-</a>
+        <a href="https://www.amazon.com/gp/product/B0FDFZYXKM?ref_=dbs_m_mng_rwt_calw_tpbk_2&storeType=ebooks" class="city-cta" target="_blank" rel="noopener noreferrer">CHECK IT OUT</a>
       </div>
-      <div class="featured-image">
-        <img src="images/vilnius/trolley.png" alt="Vilnius featured illustration">
+      <div class="featured-carousel" data-slides="2">
+        <div class="featured-track">
+          <img src="images/vilnius/cathedral2.png" alt="Vilnius featured illustration 1">
+          <img src="images/vilnius/cathedral.jpg" alt="Vilnius featured illustration 2">
+        </div>
       </div>
     </div>
     <div class="color-dots bottom">
@@ -297,21 +207,18 @@
     </div>
   </section>
 
-  <!-- BERLIN -->
   <section class="section red" id="berlin">
     <div class="container row reverse">
       <div class="text">
         <div class="label black">BERLIN</div>
         <p><strong>A GALLERY OF LINES, READY FOR COLOUR:</strong> Berlin Wall. Brandenburg Gate. Fernsehturm. Ampelmann traffic light. Berghain. U-Bahn entrance. Oberbaum Bridge. Reichstag Dome. East Side Gallery. Currywurst stand. Berlin tram. Vinyl record. Plattenbau apartments. Victory Column. Vintage Berlin bicycle.</p>
-<a href="https://www.amazon.com/gp/product/B0GSLZ7PMS?ref_=dbs_m_mng_rwt_calw_tpbk_6&storeType=ebooks" 
-   class="city-cta" 
-   target="_blank" 
-   rel="noopener noreferrer">
-   CHECK IT OUT
-</a>
+        <a href="https://www.amazon.com/gp/product/B0GSLZ7PMS?ref_=dbs_m_mng_rwt_calw_tpbk_6&storeType=ebook" class="city-cta" target="_blank" rel="noopener noreferrer">CHECK IT OUT</a>
       </div>
-      <div class="featured-image">
-        <img src="images/berlin/eastsidegallery.png" alt="Berlin featured illustration">
+      <div class="featured-carousel" data-slides="2">
+        <div class="featured-track">
+          <img src="images/berlin/eastsidegallery.png" alt="Berlin featured illustration 1">
+          <img src="images/berlin/eastsidegallery2.jpg" alt="Berlin featured illustration 2">
+        </div>
       </div>
     </div>
     <div class="color-dots bottom">
@@ -321,21 +228,18 @@
     </div>
   </section>
 
-  <!-- PARIS -->
   <section class="section yellow" id="paris">
     <div class="container row">
       <div class="text">
         <div class="label black">PARIS</div>
         <p><strong>A GALLERY OF LINES, READY FOR COLOUR:</strong> Eiffel Tower. Arc de Triomphe. Louvre Pyramid. Paris Metro entrance. Croissant and coffee. Notre Dame Cathedral. Paris carousel. Moulin Rouge windmill. Paris patisserie shopfront. Centre Pompidou. Citroën 2CV car. Paris street artist painting. Sacré-Cœur Basilica. Canal Saint-Martin footbridge. Paris bicycle.</p>
-<a href="https://www.amazon.com/gp/product/B0GSWM66F5?ref_=dbs_m_mng_rwt_calw_tpbk_7&storeType=ebooks" 
-   class="city-cta" 
-   target="_blank" 
-   rel="noopener noreferrer">
-   CHECK IT OUT
-</a>
+        <a href="https://www.amazon.com/gp/product/B0GSWM66F5?ref_=dbs_m_mng_rwt_calw_tpbk_7&storeType=ebooks" class="city-cta" target="_blank" rel="noopener noreferrer">CHECK IT OUT</a>
       </div>
-      <div class="featured-image">
-        <img src="images/paris/citroen.jpg" alt="Paris featured illustration">
+      <div class="featured-carousel" data-slides="2">
+        <div class="featured-track">
+          <img src="images/paris/citroen.jpg" alt="Paris featured illustration 1">
+          <img src="images/paris/citroen2.png" alt="Paris featured illustration 2">
+        </div>
       </div>
     </div>
     <div class="color-dots bottom">
@@ -345,21 +249,18 @@
     </div>
   </section>
 
-  <!-- AMSTERDAM -->
   <section class="section white" id="amsterdam">
     <div class="container row reverse">
       <div class="text">
         <div class="label red">AMSTERDAM</div>
         <p><strong>A GALLERY OF LINES, READY FOR COLOUR:</strong> Canal house facade. Rijksmuseum archway. Westerkerk tower. Tulip field. Vondelpark. Red Light District street. Skinny Bridge. Van Gogh Museum. Stroopwafel stack. Amsterdam Central Station. Houseboat on Amsterdam canal. Dutch windmill. I Amsterdam. Coffee shop. Classic Dutch bicycle.</p>
-<a href="https://www.amazon.com/gp/product/B0GT97R5TF?ref_=dbs_m_mng_rwt_calw_tpbk_8&storeType=ebooks" 
-   class="city-cta" 
-   target="_blank" 
-   rel="noopener noreferrer">
-   CHECK IT OUT
-</a>
+        <a href="https://www.amazon.com/gp/product/B0GT97R5TF?ref_=dbs_m_mng_rwt_calw_tpbk_8&storeType=ebooks" class="city-cta" target="_blank" rel="noopener noreferrer">CHECK IT OUT</a>
       </div>
-      <div class="featured-image">
-        <img src="images/amsterdam/tulips.png" alt="Amsterdam featured illustration">
+      <div class="featured-carousel" data-slides="2">
+        <div class="featured-track">
+          <img src="images/amsterdam/tulips.png" alt="Amsterdam featured illustration 1">
+          <img src="images/amsterdam/tulips2.jpg" alt="Amsterdam featured illustration 2">
+        </div>
       </div>
     </div>
     <div class="color-dots bottom">
@@ -369,21 +270,18 @@
     </div>
   </section>
 
-  <!-- KORTRIJK -->
   <section class="section blue" id="kortrijk">
     <div class="container row">
       <div class="text">
         <div class="label yellow">KORTRIJK</div>
-        <p><strong>A GALLERY OF LINES, READY FOR COLOUR:</strong> Broel Towers. Belfry of Kortrijk. Kortrijk City Hall. Budascoop Arts Centre. Collegebrug. Saint Martin’s Church tower. Texture Museum. Beguinage of Kortrijk. Groeninge Monument. Artisan’s creative space. Kortrijk design chair. Leie river boat. Potjevleesch. Brouwerij Omer Vander Ghinste. Golden Spurs.</p>
-<a href="https://www.amazon.com/gp/product/B0GTYB9LG7?ref_=dbs_m_mng_rwt_calw_tpbk_9&storeType=ebooks" 
-   class="city-cta" 
-   target="_blank" 
-   rel="noopener noreferrer">
-   CHECK IT OUT
-</a>
+         <p><strong>A GALLERY OF LINES, READY FOR COLOUR:</strong> Broel Towers. Belfry of Kortrijk. Kortrijk City Hall. Budascoop Arts Centre. Collegebrug. Saint Martin’s Church tower. Texture Museum. Beguinage of Kortrijk. Groeninge Monument. Artisan’s creative space. Kortrijk design chair. Leie river boat. Potjevleesch. Brouwerij Omer Vander Ghinste. Golden Spurs.</p>
+        <a href="https://www.amazon.com/gp/product/B0GTYB9LG7?ref_=dbs_m_mng_rwt_calw_tpbk_9&storeType=ebooks" class="city-cta" target="_blank" rel="noopener noreferrer">CHECK IT OUT</a>
       </div>
-      <div class="featured-image">
-        <img src="images/kortrijk/tower.jpg" alt="Kortrijk featured illustration">
+      <div class="featured-carousel" data-slides="2">
+        <div class="featured-track">
+          <img src="images/kortrijk/tower.jpg" alt="Kortrijk featured illustration 1">
+          <img src="images/kortrijk/tower2.png" alt="Kortrijk featured illustration 2">
+        </div>
       </div>
     </div>
     <div class="color-dots bottom">
@@ -393,21 +291,18 @@
     </div>
   </section>
 
-  <!-- CAPE TOWN -->
   <section class="section cream" id="capetown">
     <div class="container row reverse">
       <div class="text">
         <div class="label black">CAPE TOWN</div>
         <p><strong>A GALLERY OF LINES, READY FOR COLOUR:</strong> Table Mountain. Lion’s Head. Bo-Kaap houses. Cape of Good Hope. Clifton Boulders. Camps Bay promenade. Truth Coffee (steampunk café). V&A Waterfront Clock Tower. Boulders Beach penguins. Old Biscuit Mill Market. Kirstenbosch Boomslang walkway. South African braai. Cape Town surfer. Cape Town vineyard. Table Mountain cable car.</p>
-<a href="https://www.amazon.com/gp/product/B0GTTZ25C1?ref_=dbs_m_mng_rwt_calw_tpbk_10&storeType=ebooks" 
-   class="city-cta" 
-   target="_blank" 
-   rel="noopener noreferrer">
-   CHECK IT OUT
-</a>
+        <a href="https://www.amazon.com/gp/product/B0GTTZ25C1?ref_=dbs_m_mng_rwt_calw_tpbk_10&storeType=ebooks" class="city-cta" target="_blank" rel="noopener noreferrer">CHECK IT OUT</a>
       </div>
-      <div class="featured-image">
-        <img src="images/capetown/garden.png" alt="Cape Town featured illustration">
+      <div class="featured-carousel" data-slides="2">
+        <div class="featured-track">
+          <img src="images/capetown/garden.png" alt="Cape Town featured illustration 1">
+          <img src="images/capetown/garden2.jpg" alt="Cape Town featured illustration 2">
+        </div>
       </div>
     </div>
     <div class="color-dots bottom">
@@ -417,7 +312,6 @@
     </div>
   </section>
 
-  <!-- WHERE TO BUY -->
   <section id="buy" class="buy-section">
     <div class="container">
       <h2 class="buy-title">WHERE TO BUY</h2>
@@ -428,9 +322,9 @@
           <div class="buy-card-body">
             <p class="buy-copy">Choose your local Amazon store:</p>
             <div class="amazon-blocks">
-              <a href="https://www.amazon.com/dp/B0F4WB396Y?binding=paperback&ref=dbs_dp_rwt_sb_pc_tpbk" target="_blank" class="amazon-box red-box">.com</a>
-              <a href="https://www.amazon.de/dp/B0F4WB396Y?binding=paperback&ref_=ast_author_bsi" target="_blank" class="amazon-box yellow-box">.de</a>
-              <a href="https://www.amazon.co.uk/dp/B0F4WB396Y?binding=paperback&qid=1774542674&sr=8-1&ref=dbs_dp_rwt_sb_pc_tpbk" target="_blank" class="amazon-box white-box">.co.uk</a>
+              <a href="https://www.amazon.com/dp/B0F4WB396Y?binding=paperback&ref=dbs_dp_rwt_sb_pc_tpbk" target="_blank" rel="noopener noreferrer" class="amazon-box red-box">.com</a>
+              <a href="https://www.amazon.de/dp/B0F4WB396Y?binding=paperback&ref_=ast_author_bsi" target="_blank" rel="noopener noreferrer" class="amazon-box yellow-box">.de</a>
+              <a href="https://www.amazon.co.uk/dp/B0F4WB396Y?binding=paperback&qid=1774542674&sr=8-1&ref=dbs_dp_rwt_sb_pc_tpbk" target="_blank" rel="noopener noreferrer" class="amazon-box white-box">.co.uk</a>
             </div>
           </div>
         </div>
@@ -440,16 +334,13 @@
           <div class="buy-card-body direct-blocks">
             <div class="direct-bar"></div>
             <p class="buy-copy">For direct orders, contact us on Instagram.</p>
-            <a href="https://instagram.com/pagecraft.studio" target="_blank" class="direct-contact">
-              @pagecraft.studio
-            </a>
+            <a href="https://instagram.com/pagecraft.studio" target="_blank" rel="noopener noreferrer" class="direct-contact">@pagecraft.studio</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- COMING SOON -->
   <section id="coming" class="coming-section">
     <div class="container">
       <h2 class="coming-main-title">COMING SOON</h2>
@@ -488,176 +379,97 @@
     </div>
   </section>
 
-<!-- SUBSCRIBE -->
-<section class="subscribe-section" id="subscribe">
-  <div class="container">
-    <div class="subscribe-layout">
+  <section class="subscribe-section" id="subscribe">
+    <div class="container">
+      <div class="subscribe-layout">
+        <div class="subscribe-text">
+          <h2 class="subscribe-title">STAY IN THE LOOP</h2>
+          <p class="subscribe-copy">
+            Be the first to discover new city releases, exclusive drops,
+            and behind-the-scenes from Page Craft Studio.
+          </p>
+        </div>
 
-      <div class="subscribe-text">
-        <h2 class="subscribe-title">
-          STAY IN THE LOOP
+        <div class="subscribe-form-block">
+          <form action="#" method="post" class="subscribe-form">
+            <input type="email" name="EMAIL" placeholder="YOUR EMAIL" required />
+            <button type="submit">SUBSCRIBE</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="subscribe-bar"></div>
+    </div>
+  </section>
+
+  <footer class="footer section black" id="footer">
+    <div class="container footer-inner">
+      <div class="logo-footer">©PAGE CRAFT<br>STUDIO</div>
+      <div class="footer-content">
+        <h2 class="footer-title">
+          YOUR<br>
+          <span class="highlight red">IMAGINATION</span><br>
+          DESERVES A<br>
+          MOMENT
         </h2>
-        <p class="subscribe-copy">
-          Be the first to discover new city releases, exclusive drops,
-          and behind-the-scenes from Page Craft Studio.
-        </p>
+
+        <a href="https://www.amazon.com/dp/B0F4WYR1YX"
+           class="cta"
+           target="_blank"
+           rel="noopener noreferrer">
+           ORDER TODAY
+        </a>
       </div>
-
-      <div class="subscribe-form-block">
-
-        <!-- MAILCHIMP EMBED GOES HERE -->
-        <form action="http://eepurl.com/jCGoAM" method="post" class="subscribe-form">
-          <input 
-            type="email" 
-            name="EMAIL" 
-            placeholder="YOUR EMAIL"
-            required
-          />
-          <button type="submit">SUBSCRIBE</button>
-        </form>
-
-      </div>
-
     </div>
+    <p class="follow-text">
+      Page Craft Studio / 2026 
+      <a href="https://instagram.com/pagecraft.studio" target="_blank" rel="noopener noreferrer">@pagecraft.studio</a>
+    </p>
+  </footer>
 
-    <div class="subscribe-bar"></div>
-  </div>
-</section>
-
- <footer class="footer section black" id="footer">
-  <div class="container footer-inner">
-    <div class="logo-footer">©PAGE CRAFT<br>STUDIO</div>
-    <div class="footer-content">
-      <h2 class="footer-title">
-        YOUR<br>
-        <span class="highlight red">IMAGINATION</span><br>
-        DESERVES A<br>
-        MOMENT
-      </h2>
-
-      <a href="https://www.amazon.com/dp/B0F4WB396Y?binding=paperback&ref_=ast_author_bsi"
-         class="cta"
-         target="_blank"
-         rel="noopener noreferrer">
-         ORDER TODAY
-      </a>
-
-    </div>
-  </div>
-  <p class="follow-text">Follow us @pagecraft.studio</p>
-</footer>
-
-
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const homeLogo = document.getElementById('homeLogo');
-    const mobileQuery = window.matchMedia('(max-width: 900px)');
-    const dropdowns = Array.from(document.querySelectorAll('.nav-dropdown'));
-
-    if (homeLogo) {
-      homeLogo.addEventListener('click', (event) => {
-        event.preventDefault();
-        window.location.hash = '';
-        window.scrollTo({ top: 0, behavior: 'auto' });
-        window.location.reload();
-      });
-    }
-
-    dropdowns.forEach((dropdown) => {
-      const button = dropdown.querySelector('.nav-dropbtn');
-      if (button) {
-        button.setAttribute('type', 'button');
-        button.setAttribute('aria-expanded', 'false');
-      }
-    });
-
-    const closeAllDropdowns = (exceptDropdown = null) => {
-      dropdowns.forEach((dropdown) => {
-        if (dropdown !== exceptDropdown) {
-          dropdown.classList.remove('open');
-          const button = dropdown.querySelector('.nav-dropbtn');
-          if (button) button.setAttribute('aria-expanded', 'false');
-        }
-      });
-    };
-
-    const toggleDropdown = (dropdown) => {
-      const button = dropdown.querySelector('.nav-dropbtn');
-      const willOpen = !dropdown.classList.contains('open');
-      closeAllDropdowns(willOpen ? dropdown : null);
-      dropdown.classList.toggle('open', willOpen);
-      if (button) button.setAttribute('aria-expanded', String(willOpen));
-    };
-
-    dropdowns.forEach((dropdown) => {
-      const button = dropdown.querySelector('.nav-dropbtn');
-      const links = dropdown.querySelectorAll('.nav-dropdown-content a');
-
-      if (!button) return;
-
-      button.addEventListener('click', (event) => {
-        if (!mobileQuery.matches) return;
-        event.preventDefault();
-        event.stopPropagation();
-        toggleDropdown(dropdown);
-      });
-
-      button.addEventListener('touchstart', (event) => {
-        if (!mobileQuery.matches) return;
-        event.preventDefault();
-        event.stopPropagation();
-        toggleDropdown(dropdown);
-      }, { passive: false });
-
-      links.forEach((link) => {
-        link.addEventListener('click', (event) => {
-          event.stopPropagation();
-          setTimeout(() => closeAllDropdowns(), 50);
-        });
-
-        link.addEventListener('touchstart', (event) => {
-          event.stopPropagation();
-        }, { passive: true });
-      });
-    });
-
-    document.addEventListener('click', (event) => {
-      if (!mobileQuery.matches) return;
-      if (!event.target.closest('.nav-dropdown')) {
-        closeAllDropdowns();
-      }
-    });
-
-    document.addEventListener('touchstart', (event) => {
-      if (!mobileQuery.matches) return;
-      if (!event.target.closest('.nav-dropdown')) {
-        closeAllDropdowns();
-      }
-    }, { passive: true });
-
-    window.addEventListener('resize', () => {
-      if (!mobileQuery.matches) {
-        closeAllDropdowns();
-      }
-    });
-  });
-</script>
-
+  <a href="#top" class="scroll-top" id="scrollTopBtn" aria-label="Back to top">↑</a>
 
   <script>
-    (function () {
-      if (window.matchMedia('(max-width: 900px)').matches) {
-        document.addEventListener('DOMContentLoaded', function () {
-          document.querySelectorAll('.hero-circles, .hero-circles .circle, .hero .circle').forEach(function (el) {
-            el.style.display = 'none';
-            el.style.visibility = 'hidden';
-            el.style.opacity = '0';
-            el.style.animation = 'none';
-            el.style.transform = 'none';
-          });
-        });
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    const burgerBtn = document.getElementById('burgerBtn');
+    const mobileNav = document.getElementById('mobileNav');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        scrollTopBtn.classList.add('show');
+      } else {
+        scrollTopBtn.classList.remove('show');
       }
-    })();
+    });
+
+    burgerBtn.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('nav-open');
+      burgerBtn.classList.toggle('burger-open', isOpen);
+      burgerBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    document.querySelectorAll('.nav-dropdown-content a, .nav-actions a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.remove('nav-open');
+        burgerBtn.classList.remove('burger-open');
+        burgerBtn.setAttribute('aria-expanded', 'false');
+        document.querySelectorAll('.nav-dropdown').forEach(d => d.removeAttribute('open'));
+      });
+    });
+
+    document.querySelectorAll('.featured-carousel').forEach(carousel => {
+      const track = carousel.querySelector('.featured-track');
+      const slides = Array.from(track.children);
+      let index = 0;
+      const slideCount = slides.length;
+
+      if (slideCount > 1) {
+        setInterval(() => {
+          index = (index + 1) % slideCount;
+          track.style.transform = `translateX(-${index * 100}%)`;
+        }, 3500);
+      }
+    });
   </script>
 
 </body>
