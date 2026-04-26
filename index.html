@@ -308,7 +308,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="text">
         <div class="label red">BRUGES</div>
         <p><strong>A GALLERY OF LINES, READY FOR COLOUR:</strong> Belfry of Bruges. Markt Square. Brug Square, Gothic City Hall. Rozenhoedkaai canal view. Bonifacius bridge. Beguinage. Bruges windmill. Minnewater lake swans. Bruges canal boat. Groeningemuseum. Bruges horse carriage. Belgian chocolate box. Blinde-Ezelstraat. Bruges canal houses. Bruges lace display.</p>
-        <a href="https://www.amazon.co.uk/Bruges-Through-Lines-Bauhaus-Inspired-landmarks/dp/B0GXJZ4DKB?ref_=ast_author_dp_rw&th=1&psc=1&dib=eyJ2IjoiMSJ9.UsdPLeckDEzfVBuc47zy2qgvQ-fXNuTgYJg0O1mgNH0Cq2jt0QLZYW0RpNM3wK6n6Aci-ZQhNVWO-VUCUeLhfVaKc_p2A3bhN7pt_JVCTyGTExS0E5suApAMW0mb7Sn-XwDPyS8UABe7N6ajuWAtWn2Mp7ZXR6px8VcT6H4ExOtek5hqVYaJclYMCjn53JB98_qf_HzgfBr6fa1B7y3ebZrXR44plFAUKSErNIrqgis.0SP_euVv8PMxTQQqkh7X9zlrKiS9176hLKpB5dYGJic&dib_tag=AUTHOR" class="city-cta" target="_blank" rel="noopener noreferrer">CHECK IT OUT</a>
+        <a href="https://www.amazon.co.uk/Bruges-Through-Lines-Bauhaus-Inspired-landmarks/dp/B0GXJZ4DKB?ref_=ast_author_dp_rw&th=1&psc=1&dib=eyJ2IjoiMSJ9.UsdPLeckDEzfVBuc47zy2qgvQ-fXNuTgYJg0O1mgNH0Cq2jt0QLZYW0RpNM3wK6n6Aci-ZQhNVWO-VUCUeLhfVaKc_p2A3bhN7pt_JVCTyGTExS0E5suApAMW0mb7Sn-XwDPyS8UABe7N6ajuWAtWn2Mp7ZXR6px8VcT6H4ExOtek5hqVYaJclYMCjn53JB98_qf_HzgfBr6fa1B7y3ebZrXR44plFAUKSErNIrqgis.0SP_euVv8PMxTQQqkh7X9zlrKiS9176hLKpB5dYGJic&dib_tag=AUTHOR" class="city-cta">CHECK IT OUT</a>
       </div>
       <div class="featured-carousel" data-slides="2">
         <div class="featured-track">
@@ -424,7 +424,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="subscribe-form-block">
-          <form action="mailto:hello@craftthepage.com" method="post" enctype="text/plain" class="subscribe-form">
+          <form action="#" method="get" class="subscribe-form" id="contactForm">
             <input type="text" name="NAME" placeholder="YOUR NAME" required />
             <input type="email" name="EMAIL" placeholder="YOUR EMAIL" required />
             <textarea name="MESSAGE" placeholder="YOUR MESSAGE" required></textarea>
@@ -505,6 +505,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }, 3500);
       }
     });
+
+
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const name = contactForm.querySelector('[name="NAME"]').value.trim();
+        const email = contactForm.querySelector('[name="EMAIL"]').value.trim();
+        const message = contactForm.querySelector('[name="MESSAGE"]').value.trim();
+
+        const subject = encodeURIComponent('Message from Page Craft Studio website');
+        const body = encodeURIComponent(
+          `NAME: ${name}
+EMAIL: ${email}
+
+MESSAGE:
+${message}`
+        );
+
+        window.location.href = `mailto:hello@craftthepage.com?subject=${subject}&body=${body}`;
+      });
+    }
   </script>
 
 </body>
