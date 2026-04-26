@@ -677,12 +677,21 @@ section {
   gap: 1rem;
 }
 
-.subscribe-form input {
+.subscribe-form input,
+.subscribe-form textarea {
   padding: 1rem;
   font-size: 1rem;
   border: 2px solid var(--black);
   outline: none;
   font-weight: 700;
+  font-family: inherit;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.subscribe-form textarea {
+  min-height: 130px;
+  resize: vertical;
 }
 
 .subscribe-form button {
