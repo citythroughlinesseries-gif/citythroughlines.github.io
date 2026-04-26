@@ -424,11 +424,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="subscribe-form-block">
-          <form action="#" method="get" class="subscribe-form" id="contactForm">
+          <form class="subscribe-form" id="contactForm">
             <input type="text" name="NAME" placeholder="YOUR NAME" required />
             <input type="email" name="EMAIL" placeholder="YOUR EMAIL" required />
             <textarea name="MESSAGE" placeholder="YOUR MESSAGE" required></textarea>
-            <button type="submit">SEND</button>
+            <button type="button" id="contactSendBtn">SEND</button>
           </form>
         </div>
       </div>
@@ -506,11 +506,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }
     });
 
-
+    const contactSendBtn = document.getElementById('contactSendBtn');
     const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-      contactForm.addEventListener('submit', (event) => {
-        event.preventDefault();
+
+    if (contactSendBtn && contactForm) {
+      contactSendBtn.addEventListener('click', () => {
+        if (!contactForm.checkValidity()) {
+          contactForm.reportValidity();
+          return;
+        }
 
         const name = contactForm.querySelector('[name="NAME"]').value.trim();
         const email = contactForm.querySelector('[name="EMAIL"]').value.trim();
