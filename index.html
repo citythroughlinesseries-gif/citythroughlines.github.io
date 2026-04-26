@@ -428,7 +428,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <input type="text" name="NAME" placeholder="YOUR NAME" required />
             <input type="email" name="EMAIL" placeholder="YOUR EMAIL" required />
             <textarea name="MESSAGE" placeholder="YOUR MESSAGE" required></textarea>
-            <a href="mailto:hello@craftthepage.com?subject=Message%20from%20Page%20Craft%20Studio%20website" class="contact-send" id="contactSendBtn">SEND</a>
+            <button type="submit" id="contactSendBtn">SEND</button>
           </form>
         </div>
       </div>
@@ -506,7 +506,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }
     });
 
-    const contactSendBtn = document.getElementById('contactSendBtn');
     const contactForm = document.getElementById('contactForm');
 
     function buildContactMailto() {
@@ -522,15 +521,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       return `mailto:hello@craftthepage.com?subject=${subject}&body=${body}`;
     }
 
-    if (contactSendBtn && contactForm) {
-      contactSendBtn.addEventListener('click', (event) => {
+    if (contactForm) {
+      contactForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+
         if (!contactForm.checkValidity()) {
-          event.preventDefault();
           contactForm.reportValidity();
           return;
         }
 
-        contactSendBtn.setAttribute('href', buildContactMailto());
+        window.location.href = buildContactMailto();
       });
     }
   </script>
