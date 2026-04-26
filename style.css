@@ -685,17 +685,29 @@ section {
   outline: none;
   font-weight: 700;
   font-family: inherit;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .subscribe-form textarea {
-  min-height: 120px;
+  min-height: 150px;
   resize: vertical;
-  line-height: 1.5;
 }
 
-.subscribe-form button,
+.subscribe-form button {
+  padding: 1rem;
+  font-weight: 800;
+  border: 2px solid var(--black);
+  background: var(--yellow);
+  cursor: pointer;
+  box-shadow: 8px 8px 0 var(--red);
+  transition: all 0.2s ease;
+}
 
-.subscribe-form button:hover,
+.subscribe-form button:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 10px 10px 0 var(--red);
+}
 
 .subscribe-bar {
   width: 180px;
