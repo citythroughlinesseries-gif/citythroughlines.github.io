@@ -425,7 +425,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="subscribe-form-block">
-          <form action="https://formsubmit.co/hello@craftthepage.com" method="POST" class="subscribe-form">
+          <form action="https://formsubmit.co/hello@craftthepage.com" method="POST" class="subscribe-form" id="contactForm" target="contactHiddenFrame">
             <input type="text" name="name" placeholder="YOUR NAME" required />
             <input type="email" name="email" placeholder="YOUR EMAIL" required />
             <textarea name="message" placeholder="YOUR MESSAGE" required></textarea>
@@ -433,16 +433,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <input type="hidden" name="_subject" value="New message from Page Craft Studio" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_template" value="table" />
-            <input type="hidden" name="_next" value="https://craftthepage.com#subscribe" />
 
-            <button type="submit">SEND</button>
+            <button type="submit" class="contact-send-btn">SEND</button>
           </form>
+          <iframe name="contactHiddenFrame" class="contact-hidden-frame" title="Contact form submission"></iframe>
         </div>
       </div>
 
       <div class="subscribe-bar"></div>
     </div>
   </section>
+
+  <div class="contact-popup" id="contactPopup" aria-live="polite">
+    <div class="contact-popup-box">
+      <button class="contact-popup-close" id="contactPopupClose" type="button" aria-label="Close message">×</button>
+      <h3>MESSAGE SENT</h3>
+      <p>Thank you — your message has been sent to Page Craft Studio.</p>
+    </div>
+  </div>
 
   <footer class="footer section black" id="footer">
     <div class="container footer-inner">
@@ -512,6 +520,29 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         }, 3500);
       }
     });
+
+    const contactForm = document.getElementById('contactForm');
+    const contactPopup = document.getElementById('contactPopup');
+    const contactPopupClose = document.getElementById('contactPopupClose');
+
+    if (contactForm && contactPopup && contactPopupClose) {
+      contactForm.addEventListener('submit', () => {
+        setTimeout(() => {
+          contactPopup.classList.add('show');
+          contactForm.reset();
+        }, 500);
+      });
+
+      contactPopupClose.addEventListener('click', () => {
+        contactPopup.classList.remove('show');
+      });
+
+      contactPopup.addEventListener('click', (event) => {
+        if (event.target === contactPopup) {
+          contactPopup.classList.remove('show');
+        }
+      });
+    }
   </script>
 
 </body>
