@@ -424,11 +424,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="subscribe-form-block">
-          <form class="subscribe-form" id="contactForm" onsubmit="return false;">
-            <input type="text" name="NAME" id="contactName" placeholder="YOUR NAME" required />
-            <input type="email" name="EMAIL" id="contactEmail" placeholder="YOUR EMAIL" required />
-            <textarea name="MESSAGE" id="contactMessage" placeholder="YOUR MESSAGE" required></textarea>
-            <a href="mailto:hello@craftthepage.com" class="contact-send-button" id="contactSendLink">SEND</a>
+          <form action="https://formsubmit.co/hello@craftthepage.com" method="POST" class="subscribe-form contact-form">
+            <input type="hidden" name="_subject" value="Message from Page Craft Studio website">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="text" name="name" placeholder="YOUR NAME" required />
+            <input type="email" name="email" placeholder="YOUR EMAIL" required />
+            <textarea name="message" placeholder="YOUR MESSAGE" required></textarea>
+            <button type="submit">SEND</button>
           </form>
         </div>
       </div>
@@ -506,34 +509,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       }
     });
 
-    const contactForm = document.getElementById('contactForm');
-    const contactSendLink = document.getElementById('contactSendLink');
-
-    function updateContactMailLink() {
-      if (!contactForm || !contactSendLink) return;
-
-      const name = document.getElementById('contactName').value.trim();
-      const email = document.getElementById('contactEmail').value.trim();
-      const message = document.getElementById('contactMessage').value.trim();
-      const subject = encodeURIComponent('Message from Page Craft Studio website');
-      const body = encodeURIComponent(`NAME: ${name}\nEMAIL: ${email}\n\nMESSAGE:\n${message}`);
-
-      contactSendLink.href = `mailto:hello@craftthepage.com?subject=${subject}&body=${body}`;
-    }
-
-    if (contactForm && contactSendLink) {
-      contactForm.addEventListener('input', updateContactMailLink);
-      contactSendLink.addEventListener('click', (event) => {
-        updateContactMailLink();
-
-        if (!contactForm.checkValidity()) {
-          event.preventDefault();
-          contactForm.reportValidity();
-        }
-      });
-
-      updateContactMailLink();
-    }
   </script>
 
 </body>
