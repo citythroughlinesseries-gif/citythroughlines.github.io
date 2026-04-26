@@ -685,17 +685,16 @@ section {
   outline: none;
   font-weight: 700;
   font-family: inherit;
-  box-sizing: border-box;
-  width: 100%;
 }
 
 .subscribe-form textarea {
-  min-height: 130px;
+  min-height: 120px;
   resize: vertical;
+  line-height: 1.5;
 }
 
 .subscribe-form button,
-.subscribe-form .contact-send {
+.contact-send-button {
   padding: 1rem;
   font-weight: 800;
   border: 2px solid var(--black);
@@ -703,10 +702,15 @@ section {
   cursor: pointer;
   box-shadow: 8px 8px 0 var(--red);
   transition: all 0.2s ease;
+  text-align: center;
+  text-decoration: none;
+  color: var(--black);
+  font-family: inherit;
+  font-size: 1rem;
 }
 
 .subscribe-form button:hover,
-.subscribe-form .contact-send:hover {
+.contact-send-button:hover {
   transform: translate(-2px, -2px);
   box-shadow: 10px 10px 0 var(--red);
 }
@@ -941,10 +945,4 @@ section {
     height: 52px;
     font-size: 1.2rem;
   }
-}
-.subscribe-form .contact-send {
-  display: block;
-  text-align: center;
-  text-decoration: none;
-  color: var(--black);
 }
