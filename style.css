@@ -694,7 +694,8 @@ section {
   resize: vertical;
 }
 
-.subscribe-form button {
+.subscribe-form button,
+.subscribe-form .contact-send {
   padding: 1rem;
   font-weight: 800;
   border: 2px solid var(--black);
@@ -704,7 +705,8 @@ section {
   transition: all 0.2s ease;
 }
 
-.subscribe-form button:hover {
+.subscribe-form button:hover,
+.subscribe-form .contact-send:hover {
   transform: translate(-2px, -2px);
   box-shadow: 10px 10px 0 var(--red);
 }
@@ -939,4 +941,10 @@ section {
     height: 52px;
     font-size: 1.2rem;
   }
+}
+.subscribe-form .contact-send {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: var(--black);
 }
