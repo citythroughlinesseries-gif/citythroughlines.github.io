@@ -1028,3 +1028,14 @@ section {
   font-weight: 800;
   cursor: pointer;
 }
+.logo {
+  color: black;
+  text-decoration: none;
+}
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+}
+.footer .follow-text a[href="/city-colouring-books.html"] {
+  color: #FFD900;
+}

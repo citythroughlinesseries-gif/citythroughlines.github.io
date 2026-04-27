@@ -1,0 +1,319 @@
+/* ABOUT PAGE ONLY
+   Loaded only by city-colouring-books.html.
+   Everything is scoped to .about-page or SEO-page-specific classes,
+   so this CSS does not change the homepage. */
+
+.seo-logo-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.about-page {
+  background: var(--white);
+  color: var(--black);
+}
+
+.about-page h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.about-page p + p {
+  margin-top: 1rem;
+}
+
+.about-hero {
+  padding: 0;
+}
+
+.about-hero-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  padding: 6rem 2rem;
+}
+
+.about-hero-copy {
+  flex: 1 1 62%;
+}
+
+.about-hero-title {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+.about-lead {
+  max-width: 760px;
+  font-size: 1.15rem;
+  line-height: 1.75;
+}
+
+.about-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.about-text-link {
+  color: var(--black);
+  text-decoration: none;
+  font-weight: 800;
+  border-bottom: 4px solid var(--red);
+  padding-bottom: 0.25rem;
+}
+
+.about-text-link:hover {
+  border-bottom-color: var(--blue);
+}
+
+.about-shapes {
+  flex: 0 0 360px;
+  height: 420px;
+  position: relative;
+}
+
+.about-shape {
+  position: absolute;
+  display: block;
+}
+
+.about-blue {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background: var(--blue);
+  top: 0;
+  right: 20px;
+}
+
+.about-black {
+  width: 140px;
+  height: 140px;
+  background: var(--black);
+  top: 190px;
+  right: 75px;
+}
+
+.about-yellow {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--yellow);
+  top: 245px;
+  right: 0;
+}
+
+.about-red {
+  width: 110px;
+  height: 110px;
+  background: var(--red);
+  bottom: 0;
+  right: 45px;
+}
+
+.about-section .text {
+  max-width: 680px;
+}
+
+.about-panel {
+  flex: 0 0 330px;
+  min-height: 250px;
+  border: 3px solid var(--black);
+  box-shadow: 14px 14px 0 var(--yellow);
+  padding: 2rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.about-panel strong {
+  display: block;
+  font-size: 2rem;
+  line-height: 1.05;
+}
+
+.about-panel span {
+  display: block;
+  margin-top: 1.5rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.about-panel-yellow {
+  background: var(--yellow);
+  color: var(--black);
+}
+
+.about-panel-white {
+  background: var(--white);
+  color: var(--black);
+  box-shadow: 14px 14px 0 var(--red);
+}
+
+.about-panel-blue {
+  background: var(--blue);
+  color: var(--white);
+  box-shadow: 14px 14px 0 var(--yellow);
+}
+
+.about-mini-composition {
+  flex: 0 0 340px;
+  min-height: 300px;
+  background: var(--white);
+  border: 3px solid var(--black);
+  box-shadow: 14px 14px 0 var(--yellow);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-mini-composition div:nth-child(1) {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: var(--blue);
+  left: 35px;
+  top: 40px;
+}
+
+.about-mini-composition div:nth-child(2) {
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: var(--red);
+  right: 35px;
+  top: 85px;
+}
+
+.about-mini-composition div:nth-child(3) {
+  position: absolute;
+  width: 220px;
+  height: 32px;
+  background: var(--black);
+  left: 60px;
+  bottom: 55px;
+}
+
+.about-wide-copy {
+  max-width: 850px;
+  margin-bottom: 2rem;
+}
+
+.about-city-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.about-city-grid a {
+  display: block;
+  padding: 1rem;
+  background: var(--white);
+  color: var(--black);
+  border: 2px solid var(--black);
+  box-shadow: 8px 8px 0 var(--red);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.about-city-grid a:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 10px 10px 0 var(--red);
+}
+
+.about-final {
+  padding-bottom: 6rem;
+}
+
+.footer-story-link {
+  color: var(--white);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer-story-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+  .about-hero-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-shapes,
+  .about-panel,
+  .about-mini-composition {
+    flex-basis: auto;
+    width: 100%;
+  }
+
+  .about-shapes {
+    max-width: 360px;
+  }
+
+  .about-city-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .about-hero-inner {
+    padding: 3rem 1.25rem;
+  }
+
+  .about-shapes {
+    display: none;
+  }
+
+  .about-panel,
+  .about-mini-composition {
+    min-height: 230px;
+  }
+}
+
+/* FINAL ABOUT PAGE REFINEMENTS */
+.about-hero-title.hero-text {
+  font-size: clamp(2.8rem, 6vw, 4.6rem);
+  line-height: 1.16;
+  margin-bottom: 1.5rem;
+}
+
+.about-hero-title .highlight.yellow,
+.about-hero-title .highlight.box {
+  display: inline-block;
+}
+
+.about-city-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+@media (max-width: 1100px) {
+  .about-city-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .about-city-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .about-hero-title.hero-text {
+    font-size: 2.4rem;
+  }
+
+  .about-city-grid {
+    grid-template-columns: 1fr;
+  }
+}
