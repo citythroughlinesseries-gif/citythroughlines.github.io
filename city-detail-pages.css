@@ -1,0 +1,69 @@
+/* All city detail pages — uses the existing site-wide style.css unchanged */
+.london-page h1,.london-page h2,.london-page h3{font-weight:800;line-height:1.1}
+.london-page h1{font-size:clamp(3.3rem,7vw,6.5rem);margin:1.5rem 0 2rem}
+.london-page h2{font-size:clamp(2.1rem,4.4vw,3.6rem);margin-bottom:1.4rem}
+.london-hero{padding:4.5rem 0 5.5rem;overflow:hidden}
+.london-hero-layout{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(280px,.7fr);gap:4rem;align-items:center}
+.london-intro{font-size:1.2rem;max-width:670px}
+.london-actions{display:flex;align-items:center;gap:2rem;flex-wrap:wrap}
+.london-inline{display:inline-block;color:inherit;font-weight:800;text-decoration:none;border-bottom:4px solid var(--red);padding-bottom:.3rem}
+.london-inline:hover{border-color:var(--blue)}
+.london-hero-art{height:390px;position:relative;isolation:isolate}
+.london-hero-art>div{position:absolute;border:0;animation:bounce 4s ease-in-out infinite}
+.art-circle{width:200px;height:200px;background:var(--blue);border-radius:50%;right:5%;top:8px}
+.art-rectangle{width:155px;height:155px;background:var(--black);border-radius:50%;right:17%;left:auto;top:48%;animation-delay:.5s!important}
+.art-bar{width:92px;height:92px;background:var(--red);border-radius:50%;right:3%;bottom:4%;animation-delay:1.5s!important}
+.art-small-circle{width:68px;height:68px;background:var(--yellow);border-radius:50%;right:0;bottom:26%;animation-delay:1s!important}
+.london-hero-art span{position:absolute;bottom:0;left:7%;font-size:1rem;font-weight:800;letter-spacing:.16em}
+.london-feature{padding:5rem 0}
+.london-feature-layout{display:grid;grid-template-columns:1fr 360px;align-items:center;gap:5rem}
+.london-feature-layout p{max-width:690px}
+.london-preview{width:100%;min-width:0}
+.london-preview-track{display:grid;grid-template-columns:1fr 1fr;gap:10px;border:3px solid var(--black);padding:10px;box-shadow:14px 14px 0 var(--yellow);background:white}
+.london-preview-track img{display:block;width:100%;height:280px;object-fit:cover;min-width:0}
+.london-preview>p{font-size:.75rem;letter-spacing:.08em;font-weight:800;margin-top:1.7rem}
+.london-landmarks{padding:5rem 0 6rem}
+.london-section-head{max-width:780px;margin-bottom:3rem}
+.london-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.4rem}
+.london-card{background:white;border:2px solid var(--black);padding:1.7rem;box-shadow:7px 7px 0 var(--yellow);min-width:0}
+.london-card:nth-child(3n+2){box-shadow:7px 7px 0 var(--red)}
+.london-card:nth-child(3n){box-shadow:7px 7px 0 var(--blue)}
+.london-number{font-size:.8rem;font-weight:800;color:var(--blue);letter-spacing:.15em}
+.london-card h3{font-size:1.4rem;margin:1rem 0}
+.london-card p{font-size:.97rem;margin-bottom:0}
+.london-end{padding:5rem 0}
+.london-end-layout{display:flex;justify-content:space-between;align-items:center;gap:3rem}
+.london-end-buttons{display:flex;align-items:flex-start;flex-direction:column;gap:1.5rem}
+.london-end-buttons .city-cta{margin-top:0;background:white}
+@media(max-width:900px){.london-hero-layout,.london-feature-layout{grid-template-columns:1fr}.london-hero-art{display:none}.london-preview{max-width:550px}.london-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.london-end-layout{flex-direction:column;align-items:flex-start}}
+@media(max-width:600px){.london-hero,.london-feature,.london-landmarks,.london-end{padding:3rem 0}.london-grid{grid-template-columns:1fr}.london-preview-track img{height:210px}.london-actions{align-items:flex-start;flex-direction:column;gap:1.6rem}}
+
+/* Gentle Bauhaus hero shapes consistent with the homepage */
+@media (prefers-reduced-motion: reduce){.london-hero-art>div{animation:none}}
+
+
+/* Premium editorial refinements — limited to city detail pages */
+.london-page h1{
+  font-size:clamp(2.65rem,5.1vw,4.8rem);
+  line-height:1.09;
+  letter-spacing:-.045em;
+  margin:1.15rem 0 1.65rem;
+  max-width:11.5ch;
+}
+.london-page h2{font-size:clamp(1.95rem,3.65vw,3.15rem);letter-spacing:-.028em;line-height:1.13}
+.london-hero{padding:clamp(3.5rem,6vw,5.5rem) 0}
+.london-hero-layout{grid-template-columns:minmax(0,1.18fr) minmax(270px,.82fr);gap:clamp(2rem,5vw,5rem)}
+.london-intro{font-size:clamp(1.04rem,1.45vw,1.16rem);line-height:1.7;max-width:580px}
+.london-hero-art{height:340px}
+.london-hero-art>div{animation:none}
+.art-circle{width:184px;height:184px;right:16%;top:6%}
+.art-rectangle{width:134px;height:134px;right:31%;top:48%}
+.art-bar{width:83px;height:83px;right:7%;bottom:8%}
+.art-small-circle{width:54px;height:54px;right:4%;bottom:35%}
+.london-card{border-width:1.5px;box-shadow:5px 5px 0 var(--yellow);padding:1.8rem}
+.london-card:nth-child(3n+2){box-shadow:5px 5px 0 var(--red)}
+.london-card:nth-child(3n){box-shadow:5px 5px 0 var(--blue)}
+.london-card h3{letter-spacing:-.015em}
+.london-preview-track{border-width:2px;box-shadow:9px 9px 0 var(--yellow)}
+@media(max-width:900px){.london-page h1{max-width:none}.london-hero-layout{grid-template-columns:1fr}}
+@media(max-width:600px){.london-page h1{font-size:clamp(2.45rem,10vw,3.5rem)}.london-hero{padding:3.25rem 0}}
