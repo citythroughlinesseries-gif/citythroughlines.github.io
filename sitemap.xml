@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://craftthepage.com/</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://craftthepage.com/city-colouring-books.html</loc>
-    <lastmod>2026-04-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
+  <url><loc>https://craftthepage.com/</loc></url>
+  <url><loc>https://craftthepage.com/city-colouring-books.html</loc></url>
+  <url><loc>https://craftthepage.com/london-colouring-book.html</loc></url>
+  <url><loc>https://craftthepage.com/tokyo-colouring-book.html</loc></url>
+  <url><loc>https://craftthepage.com/newyork-colouring-book.html</loc></url>
+  <url><loc>https://craftthepage.com/stockholm-colouring-book.html</loc></url>
+  <url><loc>https://craftthepage.com/vilnius-colouring-book.html</loc></url>
+  <url><loc>https://craftthepage.com/berlin-colouring-book.html</loc></url>
+  <url><loc>https://craftthepage.com/paris-colouring-book.html</loc></url>
+  <url><loc>https://craftthepage.com/amsterdam-colouring-book.html</loc></url>
+  <url><loc>https://craftthepage.com/kortrijk-colouring-book.html</loc></url>
+  <url><loc>https://craftthepage.com/bruges-colouring-book.html</loc></url>
+  <url><loc>https://craftthepage.com/capetown-colouring-book.html</loc></url>
+  <url><loc>https://craftthepage.com/barcelona-colouring-book.html</loc></url>
+  <url><loc>https://craftthepage.com/melbourne-colouring-book.html</loc></url>
+  <url><loc>https://craftthepage.com/copenhagen-colouring-book.html</loc></url>
+  <url><loc>https://craftthepage.com/rome-colouring-book.html</loc></url>
+  <url><loc>https://craftthepage.com/seoul-colouring-book.html</loc></url>
+  <url><loc>https://craftthepage.com/oslo-colouring-book.html</loc></url>
 </urlset>
