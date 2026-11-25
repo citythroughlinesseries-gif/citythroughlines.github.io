@@ -317,3 +317,15 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* About page only: keep the bottom of the viewport flush with the black footer. */
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--black, #000);
+}
+footer.footer.section.black {
+  margin-bottom: 0;
+  border-bottom: 0;
+  background: var(--black, #000);
+}
